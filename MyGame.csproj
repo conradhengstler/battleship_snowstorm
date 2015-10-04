@@ -182,5 +182,6 @@
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\GameLogic.cs" />
     <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\Model\AIEasyPlayer.cs" />
   </ItemGroup>
 </Project>
