@@ -163,9 +163,9 @@ static class HighScoreController
 	public static void ReadHighScore(int value)
 	{
 		const int ENTRY_TOP = 500;
-		SaveScores();
-
+		
 		if (_Scores.Count == 0)
+			SaveScores();
 			LoadScores();
 
 		//is it a high score
