@@ -125,7 +125,8 @@ public static class GameController
 		}
 
 		Audio.PlaySoundEffect(GameResources.GameSound("Hit"));
-
+		if ((Audio.SoundEffectPlaying (GameResources.GameSound ("Siren")) == false) && (showAnimation == false))
+			Audio.PlaySoundEffect(GameResources.GameSound("Siren"));
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
@@ -167,9 +168,9 @@ public static class GameController
 				break;
 			case ResultOfAttack.GameOver:
 				PlayHitSequence(result.Row, result.Column, isHuman);
-				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
+				Audio.PlaySoundEffect(GameResources.GameSound("Lose"));
 
-				while (Audio.SoundEffectPlaying(GameResources.GameSound("Sink"))) {
+				while (Audio.SoundEffectPlaying(GameResources.GameSound("Lose"))) {
 					SwinGame.Delay(10);
 					SwinGame.RefreshScreen();
 				}
