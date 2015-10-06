@@ -294,6 +294,7 @@ public static class GameController
 				break;
 			case GameState.ViewingHighScores:
 				HighScoreController.HandleHighScoreInput();
+				MenuController.HandleMainMenuInput();
 				break;
 		}
 
@@ -331,6 +332,7 @@ public static class GameController
 				break;
 			case GameState.ViewingHighScores:
 				HighScoreController.DrawHighScores();
+				MenuController.DrawMainMenu();
 				break;
 		}
 
