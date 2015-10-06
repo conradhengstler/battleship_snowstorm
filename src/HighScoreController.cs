@@ -122,7 +122,7 @@ static class HighScoreController
 		const int SCORE_GAP = 30;
 
 		if (_Scores.Count == 0)
-			SaveScores();
+			
 			LoadScores();
 
 		SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
@@ -200,6 +200,8 @@ static class HighScoreController
 			_Scores.RemoveAt(_Scores.Count - 1);
 			_Scores.Add(s);
 			_Scores.Sort();
+			
+			SaveScores();
 
 			GameController.EndCurrentState();
 		}
