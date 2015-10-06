@@ -128,7 +128,8 @@ public static class GameController
 		}
 
 		Audio.PlaySoundEffect(GameResources.GameSound("Hit"));
-
+		if ((Audio.SoundEffectPlaying (GameResources.GameSound ("Siren")) == false) && (showAnimation == false))
+			Audio.PlaySoundEffect(GameResources.GameSound("Siren"));
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
